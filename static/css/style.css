@@ -1,0 +1,546 @@
+/* ================================
+    RESET BÁSICO
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f5f5f5;
+}
+
+/* ================================
+    ELEMENTOS GENERALES
+================================ */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* ================================
+    HEADER
+================================ */
+
+.header {
+    width: 100%;
+    padding: 8px 5%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #111112;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo h2{
+    font-weight: 1000;
+    line-height: 1;
+}
+
+.titulo h2 span{
+    color: #0056b3;
+}
+
+.titulo p{
+    color: gray;
+    font-size: small;
+}
+
+.logo-icon {
+    font-size: 50px;
+}
+
+
+/* NAV */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.nav a {
+    color: #333;
+    font-size: large;
+}
+
+.nav a:hover {
+    border-bottom: 2px solid #0056b3;
+}
+
+
+/* BUSCADOR */
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.buscador input {
+    width: 100%;
+    min-width: 160px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.buscador button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    opacity: 0.9;
+}
+
+
+/* ================================
+    MAIN
+================================ */
+
+main {
+    width: 100%;
+}
+
+
+/* ================================
+    HERO
+================================ */
+
+.hero {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* TEXTO HERO */
+
+.hero-texto {
+    flex: 1 1 300px;
+}
+
+.subtitulo {
+    color: gray;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    font-size: clamp(1rem, 3vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-texto>p:not(.subtitulo) {
+    color: gray;
+    font-size: 20px;
+    max-width: 450px;
+    margin-bottom: 25px;
+}
+
+
+/* BOTONES HERO */
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-principal {
+    background-color: #646464;
+    color: white;
+}
+
+.btn-secundario {
+    border: 1px solid #0056b3;
+    color: #0056b3;
+}
+
+
+/* IMAGEN HERO */
+
+.hero-imagen {
+    flex: 5;
+    min-width: 100px;
+}
+
+.imagen-placeholder {
+    min-height: 280px;
+    width: 100%;
+    max-width: 700px;
+    background-color: #dcecff;
+    border: 2px dashed #000000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #4778ae;
+}
+
+.imagen-placeholder img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.hero-imagen p{
+    position: relative;
+    border-radius: 5px 5px;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    width: 100%;
+    padding-left: 2%;
+}
+
+#imagen-carrusel {
+    width: 100%;
+    object-fit: cover;
+    /* Evita que la imagen se estire feo */
+    border-radius: 8px;
+}
+
+.btn-carrusel {
+    background-color: #616161;
+    opacity: 0.5;
+    color: white;
+    width: 40px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.btn-carrusel:hover {
+    background-color: #0056b3;
+    /* Color más oscuro al pasar el mouse */
+}
+
+
+/* ================================
+    DESTINOS
+================================ */
+
+.destinos-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+
+/* ENCABEZADO SECCIÓN */
+
+.section-header {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+}
+
+.section-header>p {
+    max-width: 400px;
+    color: gray;
+}
+
+
+/* CONTENEDOR TARJETAS */
+
+.destinos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* TARJETA */
+
+.destino-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    /*
+        El ancho base es 230px.
+        El elemento puede crecer y reducirse.
+    */
+    flex: 1 1 230px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* IMAGEN TARJETA */
+
+.card-imagen {
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.card-imagen img{
+    width: 100%;
+    min-height: 180px;
+    max-height: 180px;
+}
+
+/* CONTENIDO */
+
+.card-contenido {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.pais {
+    color: #0056b3;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.card-contenido h3 {
+    font-size: 1.3rem;
+}
+
+.descripcion {
+    color: gray;
+}
+
+
+/* BOTÓN VER MÁS */
+
+.btn-ver-mas {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 8px 14px;
+    border: none;
+    width: 100%;
+    outline: solid 1px black;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.btn-ver-mas:hover {
+    opacity: 0.9;
+}
+
+
+/* INFORMACIÓN OCULTA */
+
+.oculto {
+    display: none;
+}
+
+
+/* MENSAJE BÚSQUEDA */
+
+.mensaje-busqueda {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+
+/* ================================
+    INFORMACIÓN
+================================ */
+
+.info-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #4778ae;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.info-bloque {
+    flex: 1 1 300px;
+}
+
+.info-bloque h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.info-bloque p:last-child {
+    color: gray;
+    max-width: 500px;
+}
+
+
+/* BENEFICIOS */
+
+.beneficios {
+    flex: 1 1 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.beneficio {
+    flex: 1 1 150px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.beneficio span {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.beneficio h3 {
+    margin: 8px 0;
+}
+
+.beneficio p {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+
+/* ================================
+    FOOTER
+================================ */
+
+.footer {
+    width: 100%;
+    padding: 8px 5%;
+    background-color: rgb(66, 66, 66);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.titulo-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-footer h2{
+    font-weight: 1000;
+    line-height: 1;
+    color: white;
+}
+
+.titulo-footer h2 span{
+    color: #0056b3;
+}
+
+.titulo-footer p{
+    color: gray;
+    font-size: small;
+}
+
+.logo-icon {
+    font-size: 50px;
+}
+
+.nav-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.nav-footer a {
+    color: #ffffff;
+    font-size: large;
+}
+
+.nav-footer a:hover {
+    color: #0056b3;
+}
+
+.contactos{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.contactos img{
+    width: 30px;
+    height: 30px;
+}

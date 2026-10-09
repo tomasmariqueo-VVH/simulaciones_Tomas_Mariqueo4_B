@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tomás Mariqueo">
+    <title>TechPlus</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">💻</span>
+            <div class="titulo">
+                <h2>Tech<span>Plus</span></h2>
+                <p>Soluciones informáticas</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="buscador">
+            <input type="text" id="buscarDestino" placeholder="🔍 Buscar servicios...">
+            <button id="btnBuscar">Buscar</button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-texto">
+                <p class="subtitulo">Soporte y soluciones</p>
+                <h1>Tecnología que impulsa tu negocio</h1>
+                <p>
+                    Soporte, desarrollo y asesoría informática para empresas y personas.
+                </p>
+                <div class="hero-botones">
+                    <a href="#destinos" class="btn btn-principal">
+                        Ver servicios ➡
+                    </a>
+                </div>
+            </div>
+            <div class="hero-imagen">
+                <div class="imagen-placeholder">
+                    <!-- Botón Izquierdo (resta 1) -->
+                    <button onclick="cambiarImagen(-1)" class="btn-carrusel"> ❮ </button>
+                    <img id="imagen-carrusel" src="static/images/MannVsMachine.png" alt="Servicios">
+                    <button onclick="cambiarImagen(1)" class="btn-carrusel"> ❯ </button>
+                    <!-- Botón Derecho (suma 1) -->
+                </div>
+                <p id="texto-cambiante">Mann Vs Machine</p>
+            </div>
+        </section>
+
+        <!-- DESTINOS -->
+        <section class="destinos-section" id="servicios">
+            <div class="section-header">
+                <div>
+                    <h2>Nuestros servicios</h2>
+                </div>
+            </div>
+
+            <div class="destinos">
+                <!-- TARJETA 1 -->
+                <article class="destino-card">
+                    <div class="card-imagen">
+                        <img id="portadaCambiante1" src="static/images/soporteTecnico1.png" alt="">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Soporte técnico</h3>
+                        <p class="descripcion">
+                            Mantención, diagnóstico y soluciones rápidas.
+                        </p>
+                        <button class="btn-ver-mas">
+                            Ver más
+                        </button>
+                    </div>
+                </article>
+
+                <!-- TARJETA 2 -->
+                <article class="destino-card">
+                    <div class="card-imagen">
+                        <img id="portadaCambiante2" src="static/images/redesConectividad1.png" alt="">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Redes y conectividad</h3>
+                        <p class="descripcion">
+                            Instalación y configuración de redes corporativas.
+                        </p>
+                        <button class="btn-ver-mas">
+                            Ver más
+                        </button>
+                    </div>
+                </article>
+
+                <!-- TARJETA 3 -->
+                <article class="destino-card">
+                    <div class="card-imagen">
+                        <img id="portadaCambiante3" src="static/images/desarrolloWeb1.png" alt="">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Desarrollo web</h3>
+                        <p class="descripcion">
+                            Sitios web modernos y funcionales.
+                        </p>
+                        <button class="btn-ver-mas">
+                            Ver más
+                        </button>
+                    </div>
+                </article>
+
+                <!-- TARJETA 4 -->
+                <article class="destino-card">
+                    <div class="card-imagen">
+                        <img id="portadaCambiante4" src="static/images/seguridadInformatica1.png" alt="">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Seguridad en informática</h3>
+                        <p class="descripcion">
+                            Protección de datos y asesoría en ciberseguridad.
+                        </p>
+                        <button class="btn-ver-mas">
+                            Ver más
+                        </button>
+                    </div>
+                </article>
+            </div>
+            <p id="mensajeBusqueda" class="mensaje-busqueda"></p>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section class="destinos-section" id="proyectos">
+            <div class="section-header">
+                <div>
+                    <h2>
+                        Últimos proyectos
+                    </h2>
+                </div>
+                <a href="#">Ver más ➡</a>
+            </div>
+
+            <div class="destinos">
+                <!-- TARJETA 1 -->
+                <article class="destino-card">
+                    <div class="card-imagen">
+                        <div class="desc-superior">
+                            <p>Sitio web</p>
+                        </div>
+                        <button class="indicador-like">
+                            <img id="imagen-like" src="static/images/botonLike_neutral.png" alt="">
+                            <p id="valor-like">0</p>
+                        </button>
+                        <img id="portadaCambiante5" src="static/images/formularioMedico.png" alt="">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Clínica vida</h3>
+                        <p class="descripcion">
+                            Sitio corporativo con formulario de contacto.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- TARJETA 2 -->
+                <article class="destino-card">
+                    <div class="card-imagen">
+                        <div class="desc-superior">
+                            <p>Redes</p>
+                        </div>
+                        <button class="indicador-like">
+                            <img id="imagen-like" src="static/images/botonLike_neutral.png" alt="">
+                            <p id="valor-like">0</p>
+                        </button>
+                        <img id="portadaCambiante6" src="static/images/redSeguridad.png" alt="">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Comercial norte</h3>
+                        <p class="descripcion">
+                            Implementación de red y ciberseguridad.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- TARJETA 3 -->
+                <article class="destino-card">
+                    <div class="card-imagen">
+                        <div class="desc-superior">
+                            <p>Soporte</p>
+                        </div>
+                        <button class="indicador-like">
+                            <img id="imagen-like" src="static/images/botonLike_neutral.png" alt="">
+                            <p id="valor-like">0</p>
+                        button>
+                        <img id="portadaCambiante7" src="static/images/mantencionSoporte.png" alt="">
+                    </div>
+                    <div class="card-contenido">
+                        <h3>Colegio los robles</h3>
+                        <p class="descripcion">
+                            Mantención y soporte técnico.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+            <p id="mensajeBusqueda" class="mensaje-busqueda"></p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="logo">
+            <span class="logo-icon">💻</span>
+            <div class="titulo-footer">
+                <h2>Tech<span>Plus</span></h2>
+                <p>Soluciones informáticas</p>
+            </div>
+        </div>
+        <nav class="nav-footer">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="contactos">
+            <img src="static/images/iconoLinkedIn.png" alt="LinkeIn">
+            <img src="static/images/iconoInstagram.png" alt="Instagram">
+            <img src="static/images/iconoFacebook.png" alt="Facebook">
+        </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+
+</body>
+
+</html>
